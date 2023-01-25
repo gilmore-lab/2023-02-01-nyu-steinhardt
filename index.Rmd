@@ -20,6 +20,22 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
                       out.width = "75%")
 ```
 
+
+<!-- Scrolling final reference page -->
+<!-- http://stackoverflow.com/q/38260799 -->
+<style>
+slides > slide { overflow: scroll; }
+slides > slide:not(.nobackground):before {
+  background: none;
+  }
+slides > slide:not(.nobackground):after {
+  content: '';
+  background: none;
+  }
+}
+</style>
+<!-- Scrolling final reference page -->
+
 ## Acknowledgements
 
 - Thank you to NICHD, NIMH, NIDA, NIH OD, NSF, the Alfred P. Sloan Foundation, the James S. McDonnell Foundation, the LEGO Foundation, and the John S. Templeton Foundation
@@ -41,8 +57,9 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
 ## Agenda
 
 - Prelude
-- Some questions to ponder
-- Some answers
+- The 4 R's
+- Norms and counternorms
+- Toward a more reproducible science
 - Tools for reproducible science
 - Your open science future
 
@@ -53,8 +70,6 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
 ```{r video-nyu-data-sharing-snafu, fig.cap="[[@NYU_Health_Sciences_Library2013-gp]](https://www.youtube.com/watch?v=66oNv_DJuPc)"}
 knitr::include_url("https://www.youtube.com/embed/66oNv_DJuPc")
 ```
-
-# Some questions to ponder
 
 ## What proportion of findings in the published scientific literature (in the fields you care about) are *actually true*?
 
@@ -70,27 +85,10 @@ knitr::include_url("https://www.youtube.com/embed/66oNv_DJuPc")
 
 ## Is there a reproducibility crisis in science?
 
----
-
 >- Yes, a significant crisis
 >- Yes, a slight crisis
 >- No crisis
 >- Don't know
-
-<!-- Scrolling final reference page -->
-<!-- http://stackoverflow.com/q/38260799 -->
-<style>
-slides > slide { overflow: scroll; }
-slides > slide:not(.nobackground):before {
-  background: none;
-  }
-slides > slide:not(.nobackground):after {
-  content: '';
-  background: none;
-  }
-}
-</style>
-<!-- Scrolling final reference page -->
 
 ---
 
@@ -130,55 +128,65 @@ knitr::include_graphics("http://www.nature.com/polopoly_fs/7.36718.1464174471!/i
 knitr::include_graphics("http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg")
 ```
 
-## But wait! Do we agree on what the terms mean?
+# The 4 R's
 
-> "**Replication** refers to testing the reliability of a prior finding with different data. **Robustness** refers to testing the reliability of a prior finding using the same data and a different analysis strategy. **Reproducibility** refers to testing the reliability of a prior finding using the same data and the same analysis strategy (Natl. Acad. Sci. Eng. Med. 2019). Each of the three notions plays an important role in assessing credibility."
+---
 
-<small>[[@Nosek2022-hv]](https://doi.org/10.1146/annurev-psych-020821-114157)</small>
+```{r gennetian-table-01, out.width="100%", fig.cap="Table 1 from [[@Gennetian2022-us]](https://doi.org/10.1146/annurev-devpsych-120920-042335)"}
+knitr::include_graphics("img/gennetian-etal-2022-table-01.png")
+```
+
+---
+
+> "...**Reproducibility** refers to testing the reliability of a prior finding using the same data and the same analysis strategy (Natl. Acad. Sci. Eng. Med. 2019)...In principle, all reported evidence should be reproducible. If someone applies the same analysis to the same data, the same result should occur..."
+>
+> -- [[@Nosek2022-hv]](https://doi.org/10.1146/annurev-psych-020821-114157)
 
 ## *Methods* reproducibility
 
+- [[@goodman_what_2016]](http://doi.org/10.1126/scitranslmed.aaf5027)
 - Enough details about materials & methods recorded (& reported)
 - Same results with same materials & methods
+- Example: [[@Artner2021-qg]](http://dx.doi.org/10.1037/met0000365).
 
-<small>[[@goodman_what_2016]](http://doi.org/10.1126/scitranslmed.aaf5027)</small>
-
----
-
-> "In principle, all reported evidence should be reproducible. If someone applies the same analysis to the same data, the same result should occur. Reproducibility tests can fail for two reasons. A **process reproducibility failure** occurs when the original analysis cannot be repeated because of the unavailability of data, code, information needed to recreate the code, or necessary software or tools."
-
-<small>[[@Nosek2022-hv]](https://doi.org/10.1146/annurev-psych-020821-114157)</small>
-
----
+## What's your team's "bus number"?
 
 <!-- Hit by a bus -->
 ```{r}
 knitr::include_graphics("http://lh6.ggpht.com/_KVa1Tk_k1BU/TTjL-RSY_eI/AAAAAAAABtg/VQIfae1_wtQ/hit_thumb%5B3%5D.jpg?imgmax=800")
 ```
 
-## *Results* reproducibility 
-
-- Same results from independent study
-
-<small>[[@goodman_what_2016]](http://doi.org/10.1126/scitranslmed.aaf5027)</small>
-
 ---
 
-> "...An **outcome reproducibility failure** occurs when the reanalysis obtains a different result than the one reported originally. This can occur because of an error in either the original or the reproduction study."
+> "A **process reproducibility failure** occurs when the original analysis cannot be repeated because of the unavailability of data, code, information needed to recreate the code, or necessary software or tools."
+>
+> -- [[@Nosek2022-hv]](https://doi.org/10.1146/annurev-psych-020821-114157)
 
-<small>[[@Nosek2022-hv]](https://doi.org/10.1146/annurev-psych-020821-114157)</small>
+## *Results* reproducibility  
+
+- [[@goodman_what_2016]](http://doi.org/10.1126/scitranslmed.aaf5027)
+- Same results from independent study
+- Examples: [@Camerer2018-tr; @collaboration_estimating_2015, @Whitt2022-uf]
 
 ## *Inferential* reproducibility
 
+- [[@goodman_what_2016]](http://doi.org/10.1126/scitranslmed.aaf5027)
 - Same inferences from one or more studies or reanalyses
+- Highly reliable effects
 
-<small>[[@goodman_what_2016]](http://doi.org/10.1126/scitranslmed.aaf5027)</small>
+## A 5th 'R'
 
-## The implicit ethos of science
+> "...**Robustness** refers to testing the reliability of a prior finding using the same data and a different analysis strategy..."
+>
+> -- [[@Nosek2022-hv]](https://doi.org/10.1146/annurev-psych-020821-114157)
+
+- Examples: [@Botvinik-Nezer2020-wr; @Silberzahn2018-st]
+
+# Scientific integrity, norms and counternorms
 
 ---
 
-> "I’m talking about a specific, extra type of integrity that is not lying, but bending over backwards to show how you’re maybe wrong, that you ought to do when acting as a scientist. And this is our responsibility as scientists, certainly to other scientists, and I think to laymen."
+> "...I’m talking about a specific, *extra type of integrity* that is not lying, but *bending over backwards to show how you’re maybe wrong*, that you ought to do when acting as a scientist. And this is our responsibility as scientists, certainly to other scientists, and I think to laymen."
 
 <small>[[@Feynman1974-ld]](https://calteches.library.caltech.edu/51/2/CargoCult.htm)</small>
 
@@ -219,14 +227,16 @@ knitr::include_graphics("https://www.rd.com/wp-content/uploads/2017/02/01-How-Ba
 
 ## Do you agree or disagree with Mischel?
 
-## Adherence to norms and counternorms
+## How widely do scientists follow the norms?
 
 - Among NYU Steinhardt grads polled in January 2023
 - [Cleaning & plotting code](survey.html)
+- [Comparison with Penn State PSYCH 490 students](https://psu-psychology.github.io/psych-490-reproducibility-2023-spring-notes/survey_01_results.html)
+- [Questions asked](https://psu-psychology.github.io/psych-490-reproducibility-2023-spring-notes/survey_01_results.html#questions-asked)
 
 ---
 
-```{r adherence-to-norms}
+```{r adherence-to-norms, fig.cap="1: 'not at all', 5: 'a great deal'"}
 knitr::include_graphics("img/fig-survey-responses-1.png")
 ```
 
@@ -236,7 +246,7 @@ knitr::include_graphics("img/fig-survey-responses-1.png")
 knitr::include_graphics("img/fig-survey-norm-counter-1.png")
 ```
 
-# Discussion of Munafò et al., 2017
+# A more reproducible science
 
 ---
 
@@ -272,14 +282,13 @@ knitr::include_graphics("http://journals.plos.org/plosbiology/article/file?id=10
 knitr::include_graphics("img/marek-et-al-2022.png")
 ```
 
-# Practical Solutions [[@Gilmore2018-cb]](https://doi.org/10.1177/2515245917746500)
-
-## Some recommendations
+## Some practical solutions [[@Gilmore2018-cb]](https://doi.org/10.1177/2515245917746500)
 
 - Build upon existing (secondary) data and collect (much) larger samples
 - Share protocols and complete methods (use video)
 - Share data (*FAIR*ly)
 - Script analyses and share analysis code
+- Cite others' data, protocols, methods, analysis code
 - Preregister data analyses
 - Use version control
 
@@ -300,16 +309,29 @@ knitr::include_graphics("img/marek-et-al-2022.png")
 
 ## Where to share data?
 
+- [Penn State faculty responses to 2023 survey](https://penn-state-open-science.github.io/survey-fall-2022/data-visualization.html#where-has-data-been-shared)
 - Lab website vs.
 - Supplemental information with journal article vs.
-- Data repository
 
 ---
 
-- [Open Science Framework (OSF)](http://osf.io)
-- [ICPSR](https://www.icpsr.umich.edu/icpsrweb/)
-- [Databrary](http://databrary.org)
-- [OpenNeuro](http://openneuro.org)
+- Data repository
+    - [Open Science Framework (OSF)](http://osf.io)
+    - [ICPSR](https://www.icpsr.umich.edu/icpsrweb/)
+    - [Databrary](http://databrary.org)
+    - [OpenNeuro](http://openneuro.org)
+
+---
+
+```{r gennetian-etal-2022-fig-01, fig.cap="Figure 1 from [[@Gennetian2022-us]](https://doi.org/10.1146/annurev-devpsych-120920-042335)"}
+knitr::include_graphics("img/gennetian-etal-2022-fig-01.png")
+```
+
+---
+
+```{r databrary-volumes, fig.cap="Databrary volumes as of 2023-01-23 from https://gilmore-lab.github.io/databrary-analytics/weekly/databrary_weekly_report.html"}
+knitr::include_graphics("img/databrary-volumes-2023-01-23.png")
+```
 
 ## When to share
 
@@ -319,7 +341,67 @@ knitr::include_graphics("img/marek-et-al-2022.png")
 - ~~Never~~
 
 ## How do these suggestions impact your research?
-    
+
+# Challenges, questions, & concerns
+
+## How do we protect participants against harm?
+
+## Does open science pose risks to career enhancement and development?
+
+## Does open science limit exploration and discovery?
+
+## Does open science raise barriers for inclusion and diversity in who conducts science?
+
+## How do we balance costs and benefits?
+
+# Your open science future...
+
+---
+
+> "*The advancement of detailed and diverse knowledge about the development of the world’s children is essential for improving the health and well-being of humanity...*"
+
+> [[@noauthor_undated-xv]](https://www.srcd.org/policy-scientific-integrity-transparency-and-openness)
+
+---
+
+> "*We regard scientific integrity, transparency, and openness as essential for the conduct of research and its application to practice and policy...*"
+
+> [[@noauthor_undated-xv]](https://www.srcd.org/policy-scientific-integrity-transparency-and-openness)
+
+---
+
+> "*...the principles of human subject research require an analysis of both risks and benefits...such an analysis suggests that researchers may have a positive duty to share data in order to maximize the contribution that individual participants have made.*"
+
+> [[@Brakewood2013-wj]](http://dx.doi.org/10.1016/j.neuroimage.2013.02.040)</small>
+
+---
+
+```{r, out.width="850px"}
+knitr::include_graphics("http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg")
+```
+
+<!-- We don't have to be like the blind men and the elephant -->
+
+---
+
+```{r, out.width="450px"}
+knitr::include_graphics("http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg")
+```
+
+---
+
+<div class="centered">
+<video width="800" loop data-autoplay>
+  <source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
+  </video>
+
+rog1@psu.edu</br>
+
+<https://gilmore-lab.github.io></br>
+
+<https://gilmore-lab.github.io/2023-02-01-nyu-steinhardt/>
+</div>
+
 # Tools for reproducible science
 
 ## What is version control and why use it?
@@ -577,55 +659,10 @@ knitr::include_graphics("https://mfr.osf.io/export?url=https://osf.io/8pc9x/?act
 
 <https://80000hours.org/psychology-replication-quiz/>
 
-# Your open science future...
+
+# Resources
 
 ---
-
-> "*The advancement of detailed and diverse knowledge about the development of the world’s children is essential for improving the health and well-being of humanity...*"
-
-> [[@noauthor_undated-xv]](https://www.srcd.org/policy-scientific-integrity-transparency-and-openness)
-
----
-
-> "*We regard scientific integrity, transparency, and openness as essential for the conduct of research and its application to practice and policy...*"
-
-> [[@noauthor_undated-xv]](https://www.srcd.org/policy-scientific-integrity-transparency-and-openness)
-
----
-
-> "*...the principles of human subject research require an analysis of both risks and benefits...such an analysis suggests that researchers may have a positive duty to share data in order to maximize the contribution that individual participants have made.*"
-
-> [[@Brakewood2013-wj]](http://dx.doi.org/10.1016/j.neuroimage.2013.02.040)</small>
-
----
-
-```{r, out.width="850px"}
-knitr::include_graphics("http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/6-blind-men-hans.jpg")
-```
-
-<!-- We don't have to be like the blind men and the elephant -->
-
----
-
-```{r, out.width="450px"}
-knitr::include_graphics("http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg")
-```
-
----
-
-<div class="centered">
-<video width="800" loop data-autoplay>
-  <source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
-  </video>
-
-rog1@psu.edu</br>
-
-<https://gilmore-lab.github.io></br>
-
-<https://gilmore-lab.github.io/2023-02-01-nyu-steinhardt/>
-</div>
-
-## Resources
 
 This talk was produced on `r Sys.Date()` in [RStudio](http://rstudio.com) using R Markdown and the ioslides framework.
 The code and materials used to generate the slides may be found at <https://gilmore-lab.github.io/2023-02-01-nyu-steinhardt/>.
@@ -636,3 +673,4 @@ sessionInfo()
 ```
 
 ## References {.smaller}
+
