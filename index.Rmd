@@ -20,22 +20,6 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
                       out.width = "75%")
 ```
 
-
-<!-- Scrolling final reference page -->
-<!-- http://stackoverflow.com/q/38260799 -->
-<style>
-slides > slide { overflow: scroll; }
-slides > slide:not(.nobackground):before {
-  background: none;
-  }
-slides > slide:not(.nobackground):after {
-  content: '';
-  background: none;
-  }
-}
-</style>
-<!-- Scrolling final reference page -->
-
 ## Acknowledgements
 
 - Thank you to NICHD, NIMH, NIDA, NIH OD, NSF, the Alfred P. Sloan Foundation, the James S. McDonnell Foundation, the LEGO Foundation, and the John S. Templeton Foundation
@@ -59,12 +43,12 @@ slides > slide:not(.nobackground):after {
 - Prelude
 - The 4 R's
 - Norms and counternorms
-- Toward a more reproducible science
+- Toward a more robust science
 - Tools for reproducible science
 - Your open science future
 
-# Prelude
-
+# Prelude {data-background=#0C83EA}
+0c83ea
 ---
 
 ```{r video-nyu-data-sharing-snafu, fig.cap="[[@NYU_Health_Sciences_Library2013-gp]](https://www.youtube.com/watch?v=66oNv_DJuPc)"}
@@ -98,7 +82,7 @@ knitr::include_graphics("http://www.nature.com/polopoly_fs/7.36716.1469695923!/i
 
 ---
 
-```{r, fig.cap="Have you heard of the 'reproducibility crisis' in science?"}
+```{r, out.height = "80%", fig.cap="Have you heard of the 'reproducibility crisis' in science?"}
 knitr::include_graphics("img/fig-heard-of-repro-crisis-1.png")
 ```
 
@@ -128,7 +112,7 @@ knitr::include_graphics("http://www.nature.com/polopoly_fs/7.36718.1464174471!/i
 knitr::include_graphics("http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg")
 ```
 
-# The 4 R's
+# The 4 R's {data-background=#0C83EA}
 
 ---
 
@@ -149,7 +133,7 @@ knitr::include_graphics("img/gennetian-etal-2022-table-01.png")
 - Same results with same materials & methods
 - Example: [[@Artner2021-qg]](http://dx.doi.org/10.1037/met0000365).
 
-## What's your team's "bus number"?
+---
 
 <!-- Hit by a bus -->
 ```{r}
@@ -181,14 +165,14 @@ knitr::include_graphics("http://lh6.ggpht.com/_KVa1Tk_k1BU/TTjL-RSY_eI/AAAAAAAAB
 > -- [[@Nosek2022-hv]](https://doi.org/10.1146/annurev-psych-020821-114157)
 
 - Examples: [@Botvinik-Nezer2020-wr; @Silberzahn2018-st]
-
-# Scientific integrity, norms and counternorms
+ 
+# Scientific integrity, norms and counternorms {data-background=#0C83EA}
 
 ---
 
 > "...I’m talking about a specific, *extra type of integrity* that is not lying, but *bending over backwards to show how you’re maybe wrong*, that you ought to do when acting as a scientist. And this is our responsibility as scientists, certainly to other scientists, and I think to laymen."
 
-<small>[[@Feynman1974-ld]](https://calteches.library.caltech.edu/51/2/CargoCult.htm)</small>
+[[@Feynman1974-ld]](https://calteches.library.caltech.edu/51/2/CargoCult.htm)
 
 ---
 
@@ -196,36 +180,12 @@ knitr::include_graphics("http://lh6.ggpht.com/_KVa1Tk_k1BU/TTjL-RSY_eI/AAAAAAAAB
 
 <small>[[@Feynman1974-ld]](https://calteches.library.caltech.edu/51/2/CargoCult.htm)</small>
 
-## [Robert Merton](https://www.amazon.com/Sociology-Science-Theoretical-Empirical-Investigations/dp/0226520927) and scientific norms
+## Robert Merton [1942](https://www.amazon.com/Sociology-Science-Theoretical-Empirical-Investigations/dp/0226520927) and scientific norms
 
 - **universalism**: scientific validity is independent of sociopolitical status/personal attributes of its participants
 - **communalism**: common ownership of scientific goods (intellectual property)
 - **disinterestedness**: scientific institutions benefit a common scientific enterprise, not specific individuals
 - **organized skepticism**: claims should be exposed to critical scrutiny before being accepted
-
-<small>[[@Merton1979-le]](https://www.amazon.com/Sociology-Science-Theoretical-Empirical-Investigations/dp/0226520927)</small>
-
-## Are these norms at-risk?
-
----
-
-```{r}
-knitr::include_graphics("https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg")
-```
-
----
-
-> "*...psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.*"
-
-<small>[[@Mischel2011-br]](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
-
----
-
-> "*The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing, rather than building on each other’s directly relevant best work.*"
-
-<small>[[@Mischel2011-br]](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
-
-## Do you agree or disagree with Mischel?
 
 ## How widely do scientists follow the norms?
 
@@ -246,17 +206,37 @@ knitr::include_graphics("img/fig-survey-responses-1.png")
 knitr::include_graphics("img/fig-survey-norm-counter-1.png")
 ```
 
-# A more reproducible science
+---
+
+```{r, out.width="90%"}
+knitr::include_graphics("https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg")
+```
 
 ---
 
-```{r, fig.cap="[[@munafo_manifesto_2017]](http://www.nature.com/articles/s41562-016-0021)"}
+> "*...psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.*"
+
+[[@Mischel2011-br]](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)
+
+---
+
+> "*The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing, rather than building on each other’s directly relevant best work.*"
+
+[[@Mischel2011-br]](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)
+
+## Do you agree or disagree with Mischel?
+
+# Toward a more robust science {data-background=#0C83EA}
+
+---
+
+```{r, out.width="90%", fig.cap="[[@munafo_manifesto_2017]](http://www.nature.com/articles/s41562-016-0021)"}
 knitr::include_graphics("https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-016-0021/MediaObjects/41562_2016_Article_BFs415620160021_Fig1_HTML.jpg")
 ```
 
 ---
 
-```{r, fig.cap="[[@munafo_manifesto_2017]](http://www.nature.com/articles/s41562-016-0021)"}
+```{r, out.width="90%", fig.cap="[[@munafo_manifesto_2017]](http://www.nature.com/articles/s41562-016-0021)"}
 knitr::include_graphics("img/munafo-table-1.png")
 ```
 
@@ -266,7 +246,7 @@ knitr::include_graphics("img/munafo-table-1.png")
 
 ## Do we have the power we need?
 
-```{r, fig.cap="[[@Szucs2017-fc]](http://doi.org/10.1371/journal.pbio.2000797)"}
+```{r, out.width="90%", fig.cap="[[@Szucs2017-fc]](http://doi.org/10.1371/journal.pbio.2000797)"}
 knitr::include_graphics("http://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2000797.g003&type=large")
 ```
 
@@ -278,7 +258,7 @@ knitr::include_graphics("http://journals.plos.org/plosbiology/article/file?id=10
 
 ---
 
-```{r, out.width="750px", fig.cap="[[@Marek2022-vu]](http://dx.doi.org/10.1038/s41586-022-04492-9)"}
+```{r, fig.cap="[[@Marek2022-vu]](http://dx.doi.org/10.1038/s41586-022-04492-9)"}
 knitr::include_graphics("img/marek-et-al-2022.png")
 ```
 
@@ -287,6 +267,9 @@ knitr::include_graphics("img/marek-et-al-2022.png")
 - Build upon existing (secondary) data and collect (much) larger samples
 - Share protocols and complete methods (use video)
 - Share data (*FAIR*ly)
+
+---
+
 - Script analyses and share analysis code
 - Cite others' data, protocols, methods, analysis code
 - Preregister data analyses
@@ -297,7 +280,10 @@ knitr::include_graphics("img/marek-et-al-2022.png")
 - Data
 - Analysis code
 - [Displays](https://nyu.databrary.org/volume/144), [materials](https://nyu.databrary.org/volume/248)
-- Procedure manuals
+
+---
+
+- Procedure manuals (even IRB application!)
     - https://play-behaviorome.github.io/KoBoToolbox/
     - https://play-behaviorome.github.io./protocol/
     - https://penn-state-open-science.github.io/survey-fall-2022/
@@ -306,12 +292,13 @@ knitr::include_graphics("img/marek-et-al-2022.png")
 
 - With ethics board/IRB approval
 - With participant permission
+- Possibly with a restricted audience
 
 ## Where to share data?
 
 - [Penn State faculty responses to 2023 survey](https://penn-state-open-science.github.io/survey-fall-2022/data-visualization.html#where-has-data-been-shared)
 - Lab website vs.
-- Supplemental information with journal article vs.
+- Supplemental information with journal article versus...
 
 ---
 
@@ -329,8 +316,14 @@ knitr::include_graphics("img/gennetian-etal-2022-fig-01.png")
 
 ---
 
-```{r databrary-volumes, fig.cap="Databrary volumes as of 2023-01-23 from https://gilmore-lab.github.io/databrary-analytics/weekly/databrary_weekly_report.html"}
+```{r databrary-volumes, out.width="50%", fig.cap="Databrary volumes as of 2023-01-23 from https://gilmore-lab.github.io/databrary-analytics/weekly/databrary_weekly_report.html"}
 knitr::include_graphics("img/databrary-volumes-2023-01-23.png")
+```
+
+---
+
+```{r, out.width="100%", fig.cap="Demographic info from https://gilmore-lab.github.io/databrary-analytics/participant-demographics/participant-demog-report.html"}
+knitr::include_graphics("img/databrary-age-demographic-snapshot.png")
 ```
 
 ## When to share
@@ -340,9 +333,9 @@ knitr::include_graphics("img/databrary-volumes-2023-01-23.png")
 - Grant ends
 - ~~Never~~
 
-## How do these suggestions impact your research?
+## How might these practices impact your research?
 
-# Challenges, questions, & concerns
+# Challenges, questions, & concerns {data-background=#0C83EA}
 
 ## How do we protect participants against harm?
 
@@ -354,7 +347,7 @@ knitr::include_graphics("img/databrary-volumes-2023-01-23.png")
 
 ## How do we balance costs and benefits?
 
-# Your open science future...
+# Your open science future...  {data-background=#0C83EA}
 
 ---
 
@@ -402,7 +395,7 @@ rog1@psu.edu</br>
 <https://gilmore-lab.github.io/2023-02-01-nyu-steinhardt/>
 </div>
 
-# Tools for reproducible science
+# Tools for reproducible science  {data-background=#0C83EA}
 
 ## What is version control and why use it?
 
@@ -660,7 +653,7 @@ knitr::include_graphics("https://mfr.osf.io/export?url=https://osf.io/8pc9x/?act
 <https://80000hours.org/psychology-replication-quiz/>
 
 
-# Resources
+# Resources  {data-background=#0C83EA}
 
 ---
 

@@ -1,5 +1,9 @@
+h1 {
+  text-align: center;
+}
 h2 {
   font-size: 50px;
+  text-align: center;
 }
 h3 {
   font-size: 44px;
@@ -10,4 +14,9 @@ p, li, td {
 
 .small {
   font-size: 24px;
+}
+
+slides > slide {
+  overflow-x: auto !important;
+  overflow-y: auto !important;
 }
