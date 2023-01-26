@@ -345,6 +345,17 @@ knitr::include_graphics("img/databrary-age-demographic-snapshot.png")
 
 ## Does open science raise barriers for inclusion and diversity in who conducts science?
 
+---
+
+>Communication scholarship is increasingly adopting Open Science (OS) practices: sharing code and data, pre-registering studies, and conducting replications. Yet, scholars have also critiqued how the OS movement might create barriers and exacerbate inequalities. As the field aims to better support a more diverse body of scholars, it is imperative to understand who participates in OS. In this pre-registered study, we look at one important area of inequality, author gender, among rates of articles that adopt OS practices versus articles unaffiliated with OS practices. Using computational methods, we categorize author gender and use of OS practices across 4,561 quantitative communication articles. 
+>
+> [[@Langrock2022-kl]](https://doi.org/10.2139/ssrn.4283210)
+
+
+>...We find prevalent gender gaps, such that women are significantly less likely to lead, and co-author, papers that adopt OS practices relative to papers unaffiliated with OS. These gender gaps are unexplained by journal-level differences or publication year. Our results highlight a tension between the aims of the OS movement and efforts to increase inclusivity in the field. A commitment to truly open science requires a commitment to solving participation gaps. Our work aims to spark a conversation towards better, and more equitable, communication research.
+>
+> [[@Langrock2022-kl]](https://doi.org/10.2139/ssrn.4283210)
+
 ## How do we balance costs and benefits?
 
 # Your open science future...  {data-background=#0C83EA}
