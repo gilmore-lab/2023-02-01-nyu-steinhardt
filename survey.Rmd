@@ -7,11 +7,6 @@ csl: bib/apa.csl
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,
-                      fig.path = "img/")
-```
-
 ## Purpose
 
 This document summarizes the data downloading and cleaning involved in the informal survey of NYU Steinhardt graduate students collected in January and February of 2023.
@@ -34,7 +29,9 @@ Questions about the reproducibility crisis are from [[@baker_1500_2016]](http://
 ```{r set-up-survey-results, include = FALSE}
 # Defaults for chunks, especially figures
 knitr::opts_chunk$set(echo = TRUE,
-                      out.width = "75%")
+                      out.width = "75%",
+                      fig.path = "img/")
+
 ```
 
 We load the required R packages.
@@ -118,11 +115,12 @@ survey_qs <- tibble(q_long = names(survey), q_short = new_names)
 
 # Swap out old (long) names for new (short) names
 names(survey) <- new_names
-
-survey_qs %>%
-  kableExtra::kable(., format='html')
 ```
----
+
+```{r survey-questions}
+survey_qs %>%
+  kableExtra::kable(., format='html', caption="Survey questions")
+```
 
 These data are 'wide', meaning that there are multiple variables for each respondent.
 The data will be easier to visualize and analyze if we make the data 'longer'.
@@ -197,7 +195,7 @@ survey %>%
   dplyr::filter(., !is.na(my_area_reproducibility_crisis)) %>%
   ggplot2::ggplot() +
   ggplot2::aes(my_area_reproducibility_crisis, fill = my_area_reproducibility_crisis) +
-  ggplot2::geom_bar()+
+  ggplot2::geom_bar() +
   ggplot2::theme(legend.position = "none") +
   coord_flip()
 ```
@@ -212,6 +210,8 @@ survey_long %>%
   aes(norm_counternorm, rating, fill = type) + 
   geom_violin() +
   geom_point(position = position_jitter(width = .07, height = .07), alpha = 0.5) +
+#  xlim(1,5) +
+  scale_y_discrete(limits = c("1", "2", "3", "4", "5")) +
   coord_flip() +
   ggtitle("Ratings of scientists' adherence to norms and counternorms") +
   theme(legend.position = "bottom") +
@@ -223,7 +223,9 @@ survey_long %>%
   ggplot() + 
   aes(type, rating, fill = type) + 
   geom_violin() +
-  geom_point(position = position_jitter(width = .07, height = .07), alpha = 0.5)
+  geom_point(position = position_jitter(width = .07, height = .07), alpha = 0.5) +
+  scale_y_discrete(limits = c("1", "2", "3", "4", "5")) +
+  theme(legend.position = "none")
 ```
 
 ## References
