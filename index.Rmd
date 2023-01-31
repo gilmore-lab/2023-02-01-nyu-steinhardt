@@ -47,7 +47,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
 - Tools for reproducible science
 - Your open science future
 
-# Prelude {data-background=#0C83EA}
+# Prelude {data-background=#290af2}
 
 ---
 
@@ -112,7 +112,7 @@ knitr::include_graphics("http://www.nature.com/polopoly_fs/7.36718.1464174471!/i
 knitr::include_graphics("http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg")
 ```
 
-# The 4 R's {data-background=#0C83EA}
+# The 4 R's {data-background=#290af2}
 
 ---
 
@@ -166,7 +166,7 @@ knitr::include_graphics("http://lh6.ggpht.com/_KVa1Tk_k1BU/TTjL-RSY_eI/AAAAAAAAB
 
 - Examples: [@Botvinik-Nezer2020-wr; @Silberzahn2018-st]
  
-# Scientific integrity, norms, & counternorms {data-background=#0C83EA}
+# Scientific integrity, norms, & counternorms {data-background=#290af2}
 
 ---
 
@@ -226,7 +226,7 @@ knitr::include_graphics("https://www.rd.com/wp-content/uploads/2017/02/01-How-Ba
 
 ## Do you agree or disagree with Mischel?
 
-# Toward a more robust science {data-background=#0C83EA}
+# Toward a more robust science {data-background=#290af2}
 
 ---
 
@@ -335,7 +335,7 @@ knitr::include_graphics("img/databrary-age-demographic-snapshot.png")
 
 ## How might these practices impact your research?
 
-# Challenges, questions, & concerns {data-background=#0C83EA}
+# Challenges, questions, & concerns {data-background=#290af2}
 
 ## How do we protect participants against harm?
 
@@ -365,7 +365,7 @@ knitr::include_graphics("img/databrary-age-demographic-snapshot.png")
 
 ## How do we balance costs and benefits?
 
-# Your open science future...  {data-background=#0C83EA}
+# Your open science future...  {data-background=#290af2}
 
 ---
 
@@ -413,7 +413,7 @@ rog1@psu.edu</br>
 <https://gilmore-lab.github.io/2023-02-01-nyu-steinhardt/>
 </div>
 
-# Tools for reproducible science  {data-background=#0C83EA}
+# Tools for reproducible science  {data-background=#290af2}
 
 ## What is version control and why use it?
 
@@ -671,7 +671,7 @@ knitr::include_graphics("https://mfr.osf.io/export?url=https://osf.io/8pc9x/?act
 <https://80000hours.org/psychology-replication-quiz/>
 
 
-# Resources  {data-background=#0C83EA}
+# Resources  {data-background=#290af2}
 
 ---
 
