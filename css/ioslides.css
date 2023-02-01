@@ -1,15 +1,12 @@
 .subtitle {
-  text-align: right;
-}
-
-h1 {
-  text-align: center;
+  text-align: left;
 }
 
 h2 {
   font-size: 50px;
-  text-align: center;
+  text-align: left;
 }
+
 h3 {
   font-size: 44px;
 }
@@ -24,4 +21,9 @@ p, li, td {
 slides > slide {
   overflow-x: auto !important;
   overflow-y: auto !important;
+}
+
+slides > slide.backdrop {
+  background: none !important;
+  background-color: white !important;
 }

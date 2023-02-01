@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
 
 ## Acknowledgements
 
-- Thank you to NICHD, NIMH, NIDA, NIH OD, NSF, the Alfred P. Sloan Foundation, the James S. McDonnell Foundation, the LEGO Foundation, and the John S. Templeton Foundation
+- Thank you to NICHD, NIMH, NIDA, NIH OD, NSF, the Alfred P. Sloan Foundation, the James S. McDonnell Foundation, the LEGO Foundation, and the John S. Templeton Foundation for support
 
 ---
 
@@ -33,7 +33,8 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
 <img src="https://ai.cs.cmu.edu/sites/default/files/CMU.png" height=150px/>
 <img src="http://onwardstate.com/wp-content/uploads/2014/10/93" height=150px/>
 <img src="img/sleic.png" height=150px/></br>
-<img src="https://nyu.databrary.org/web/images/logo/databrary-nav.svg" height=150px>
+<img src="https://nyu.databrary.org/web/images/logo/databrary-nav.svg" height=150px/>
+<img src="https://www.play-project.org/img/PLAY-logo.png" height=150px/>
 </div>
 
 <!-- Gilmore photo biography -->
@@ -42,12 +43,12 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
 
 - Prelude
 - The 4 R's
-- Norms and counternorms
+- Integrity, norms, & counternorms
 - Toward a more robust science
 - Tools for reproducible science
 - Your open science future
 
-# Prelude {data-background=#290af2}
+# Prelude {data-background=#839b9e}
 
 ---
 
@@ -112,7 +113,7 @@ knitr::include_graphics("http://www.nature.com/polopoly_fs/7.36718.1464174471!/i
 knitr::include_graphics("http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg")
 ```
 
-# The 4 R's {data-background=#290af2}
+# The 4 R's {data-background=#839b9e}
 
 ---
 
@@ -124,14 +125,21 @@ knitr::include_graphics("img/gennetian-etal-2022-table-01.png")
 
 > "...**Reproducibility** refers to testing the reliability of a prior finding using the same data and the same analysis strategy (Natl. Acad. Sci. Eng. Med. 2019)...In principle, all reported evidence should be reproducible. If someone applies the same analysis to the same data, the same result should occur..."
 >
-> -- [[@Nosek2022-hv]](https://doi.org/10.1146/annurev-psych-020821-114157)
+> -- [@Nosek2022-hv](https://doi.org/10.1146/annurev-psych-020821-114157)
 
 ## *Methods* reproducibility
 
 - [@goodman_what_2016](http://doi.org/10.1126/scitranslmed.aaf5027)
 - Enough details about materials & methods recorded (& reported)
 - Same results with same materials & methods
-- Example: [@Artner2021-qg](http://dx.doi.org/10.1037/met0000365).
+    - [@Artner2021-qg](http://dx.doi.org/10.1037/met0000365).
+
+
+---
+
+> "A **process reproducibility failure** occurs when the original analysis cannot be repeated because of the unavailability of data, code, information needed to recreate the code, or necessary software or tools."
+>
+> -- [@Nosek2022-hv](https://doi.org/10.1146/annurev-psych-020821-114157)
 
 ---
 
@@ -140,43 +148,36 @@ knitr::include_graphics("img/gennetian-etal-2022-table-01.png")
 knitr::include_graphics("http://lh6.ggpht.com/_KVa1Tk_k1BU/TTjL-RSY_eI/AAAAAAAABtg/VQIfae1_wtQ/hit_thumb%5B3%5D.jpg?imgmax=800")
 ```
 
----
-
-> "A **process reproducibility failure** occurs when the original analysis cannot be repeated because of the unavailability of data, code, information needed to recreate the code, or necessary software or tools."
->
-> -- [@Nosek2022-hv](https://doi.org/10.1146/annurev-psych-020821-114157)
-
 ## *Results* reproducibility  
 
 - [@goodman_what_2016](http://doi.org/10.1126/scitranslmed.aaf5027)
 - Same results from independent study
-- Examples: [@Camerer2018-tr; @collaboration_estimating_2015; @Whitt2022-uf]
+    - [@Camerer2018-tr; @collaboration_estimating_2015; @Whitt2022-uf]
 
 ## *Inferential* reproducibility
 
 - [@goodman_what_2016](http://doi.org/10.1126/scitranslmed.aaf5027)
 - Same inferences from one or more studies or reanalyses
-- Highly reliable effects
 
 ## A 5th 'R'
 
-> "...**Robustness** refers to testing the reliability of a prior finding using the same data and a different analysis strategy..."
+> "*...**Robustness** refers to testing the reliability of a prior finding using the same data and a different analysis strategy...*"
 >
 > -- [@Nosek2022-hv](https://doi.org/10.1146/annurev-psych-020821-114157)
 
-- Examples: [@Botvinik-Nezer2020-wr; @Silberzahn2018-st]
+- "Many analysts": [@Botvinik-Nezer2020-wr; @Silberzahn2018-st]
  
-# Scientific integrity, norms, & counternorms {data-background=#290af2}
+# Integrity, norms, & counternorms {data-background=#839b9e}
 
 ---
 
-> "...I’m talking about a specific, *extra type of integrity* that is not lying, but *bending over backwards to show how you’re maybe wrong*, that you ought to do when acting as a scientist. And this is our responsibility as scientists, certainly to other scientists, and I think to laymen."
+>"*The first principle is that **you must not fool yourself—and you are the easiest person to fool**.  So you have to be very careful about that.  After you’ve not fooled yourself, it’s easy not to fool other scientists.*"
 >
 > -- [@Feynman1974-ld](https://calteches.library.caltech.edu/51/2/CargoCult.htm)
 
 ---
 
-> "The first principle is that *you must not fool yourself—and you are the easiest person to fool*.  So you have to be very careful about that.  After you’ve not fooled yourself, it’s easy not to fool other scientists.  You just have to be honest in a conventional way after that."
+>"*...I’m talking about a specific, **extra type of integrity** that is not lying, but **bending over backwards to show how you’re maybe wrong**, that you ought to do when acting as a scientist. And this is our responsibility as scientists, certainly to other scientists, and I think to laymen.*"
 >
 > -- [@Feynman1974-ld](https://calteches.library.caltech.edu/51/2/CargoCult.htm)
 
@@ -187,10 +188,10 @@ knitr::include_graphics("http://lh6.ggpht.com/_KVa1Tk_k1BU/TTjL-RSY_eI/AAAAAAAAB
 - **disinterestedness**: scientific institutions benefit a common scientific enterprise, not specific individuals
 - **organized skepticism**: claims should be exposed to critical scrutiny before being accepted
 
-## How widely do scientists follow the norms?
+## How widely do scientists follow these norms?
 
-- Among NYU Steinhardt grads polled in January 2023
-- [Cleaning & plotting code](survey.html)
+- Among NYU Steinhardt Applied Psychology grads polled in January/February 2023
+    - [Cleaning & plotting code](survey.html)
 - [Comparison with Penn State PSYCH 490 students](https://psu-psychology.github.io/psych-490-reproducibility-2023-spring-notes/survey_01_results.html)
 - [Questions asked](https://psu-psychology.github.io/psych-490-reproducibility-2023-spring-notes/survey_01_results.html#questions-asked)
 
@@ -214,19 +215,29 @@ knitr::include_graphics("https://www.rd.com/wp-content/uploads/2017/02/01-How-Ba
 
 ---
 
-> "*...psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.*"
+>"*...psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.*"
 >
-> -- [@Mischel2011-br](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)
+>-- [@Mischel2011-br](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)
 
 ---
 
-> "*The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing, rather than building on each other’s directly relevant best work.*"
+>"*The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing, rather than building on each other’s directly relevant best work.*"
 >
 >-- [@Mischel2011-br](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)
 
 ## Do you agree or disagree with Mischel?
 
-# Toward a more robust science {data-background=#290af2}
+---
+
+>"*We conducted the Reproducibility Project: Cancer Biology to investigate the replicability of preclinical research in cancer biology. The initial aim of the project was to repeat 193 experiments from 53 high-impact papers...However, the various barriers and challenges we encountered while designing and conducting the experiments meant that we were only able to repeat 50 experiments from 23 papers...This experience draws attention to a basic and fundamental concern about replication – it is hard to assess whether reported findings are credible.*"
+>
+> -- [@Errington2021-dp](https://doi.org/10.7554/eLife.67995)
+
+# Towards a more robust psychological science {data-background=#839b9e}
+
+---
+
+Munafò, M. R., Nosek, B. A., Bishop, D. V. M., Button, K. S., Chambers, C. D., Sert, N. P. du, Simonsohn, U., Wagenmakers, E.-J., Ware, J. J. & Ioannidis, J. P. A. (2017). A manifesto for reproducible science. *Nature Human Behaviour*, *1*, 0021. https://doi.org/10.1038/s41562-016-0021
 
 ---
 
@@ -240,7 +251,11 @@ knitr::include_graphics("https://media.springernature.com/full/springer-static/i
 knitr::include_graphics("img/munafo-table-1.png")
 ```
 
-## How do these ideas affect your research?
+---
+
+```{r, out.width="90%", fig.cap="[@munafo_manifesto_2017](http://www.nature.com/articles/s41562-016-0021)"}
+knitr::include_graphics("img/munafo-table-1-expanded.png")
+```
 
 ## Do we have the power we need?
 
@@ -265,13 +280,13 @@ knitr::include_graphics("img/marek-et-al-2022.png")
 - Build upon existing (secondary) data and collect (much) larger samples
 - Share protocols and complete methods (use video)
 - Share data (*FAIR*ly)
-    - Findable, Accessibly, Inter-operable, Re-usable
+    - Findable, Accessible, Inter-operable, Re-usable, [@Wilkinson2016-qr]
 
 ---
 
 - Script analyses and share analysis code
 - Cite others' data, protocols, methods, analysis code
-- Preregister data analyses
+- Preregister data analyses (confirmatory vs. exploratory)
 - Use version control
 
 ## What to share
@@ -282,7 +297,7 @@ knitr::include_graphics("img/marek-et-al-2022.png")
 
 ---
 
-- Procedure manuals (even IRB application!)
+- Procedure manuals (even IRB applications!)
     - https://play-behaviorome.github.io/KoBoToolbox/
     - https://play-behaviorome.github.io./protocol/
     - https://penn-state-open-science.github.io/survey-fall-2022/
@@ -335,7 +350,7 @@ knitr::include_graphics("img/databrary-age-demographic-snapshot.png")
 
 ## How might these practices impact your research?
 
-# Challenges, questions, & concerns {data-background=#290af2}
+# Challenges, questions, & concerns {data-background=#839b9e}
 
 ## How do we protect participants against harm?
 
@@ -359,13 +374,13 @@ knitr::include_graphics("img/databrary-age-demographic-snapshot.png")
 
 ---
 
->We find prevalent gender gaps, such that women are significantly less likely to lead, and co-author, papers that adopt OS practices relative to papers unaffiliated with OS. These gender gaps are unexplained by journal-level differences or publication year. Our results highlight a tension between the aims of the OS movement and efforts to increase inclusivity in the field. A commitment to truly open science requires a commitment to solving participation gaps. Our work aims to spark a conversation towards better, and more equitable, communication research.
+>"*We find prevalent gender gaps, such that women are significantly less likely to lead, and co-author, papers that adopt OS practices relative to papers unaffiliated with OS. These gender gaps are unexplained by journal-level differences or publication year. Our results highlight a tension between the aims of the OS movement and efforts to increase inclusivity in the field. A commitment to truly open science requires a commitment to solving participation gaps. Our work aims to spark a conversation towards better, and more equitable, communication research.*"
 >
 > -- [@Langrock2022-kl](https://doi.org/10.2139/ssrn.4283210)
 
 ## How do we balance costs and benefits?
 
-# Your open science future...  {data-background=#290af2}
+# Your open science future...  {data-background=#839b9e}
 
 ---
 
@@ -383,7 +398,7 @@ knitr::include_graphics("img/databrary-age-demographic-snapshot.png")
 
 > "*...the principles of human subject research require an analysis of both risks and benefits...such an analysis suggests that researchers may have a positive duty to share data in order to maximize the contribution that individual participants have made.*"
 >
->-- [@Brakewood2013-wj](http://dx.doi.org/10.1016/j.neuroimage.2013.02.040)</small>
+>-- [@Brakewood2013-wj](http://dx.doi.org/10.1016/j.neuroimage.2013.02.040)
 
 ---
 
@@ -395,7 +410,7 @@ knitr::include_graphics("http://cdn2.hubspot.net/hub/134568/file-1208368053-jpg/
 
 ---
 
-```{r, out.width="450px"}
+```{r, out.width="400px"}
 knitr::include_graphics("http://static.neatorama.com/images/2012-09/girl-hugging-elephant.jpg")
 ```
 
@@ -413,7 +428,7 @@ rog1@psu.edu</br>
 <https://gilmore-lab.github.io/2023-02-01-nyu-steinhardt/>
 </div>
 
-# Tools for reproducible science  {data-background=#290af2}
+# Tools for reproducible science  {data-background=#839b9e}
 
 ## What is version control and why use it?
 
@@ -671,7 +686,7 @@ knitr::include_graphics("https://mfr.osf.io/export?url=https://osf.io/8pc9x/?act
 <https://80000hours.org/psychology-replication-quiz/>
 
 
-# Resources  {data-background=#290af2}
+# Resources  {data-background=#839b9e}
 
 ---
 
